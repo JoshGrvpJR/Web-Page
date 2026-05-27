@@ -1,0 +1,94 @@
+.section-home {
+  height: 100vh;
+  background-image: url('/background-img-fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.div-main {
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+
+  .date {
+    width: fit-content;
+    background: var(--color-logo-sub);
+    border: 1px solid var(--color-primary);
+    border-radius: 20px;
+    color: var(--color-text);
+    font-family: var(--font-secondary);
+    padding: 8px 16px;
+    margin-bottom: 26px;
+  }
+
+  .title {
+    span {
+      font-family: var(--font-primary);
+      font-size: 100px;
+      &:first-child {
+        color: var(--color-white);
+      }
+    }
+
+    .gradient {
+      background: linear-gradient(to right, var(--color-primary), var(--color-logo-text));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    margin-bottom: 24px;
+  }
+
+  .info {
+    font-family: var(--font-secondary);
+    font-size: 25px;
+    color: var(--color-text-secondary);
+    margin-bottom: 40px;
+  }
+
+  .navegation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    a {
+        font-family: var(--font-secondary);
+      text-decoration: none;
+      &:first-child {
+        color: var(--color-white);
+        background: var(--color-primary);
+        padding: 10px 24px;
+        border-radius: 20px;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 0px 5px 15px var(--color-logo-bg);
+        }
+      }
+      &:last-child {
+        color: var(--color-white);
+        background: transparent;
+
+        padding: 10px 24px;
+        border: 1px solid var(--color-text-secondary);
+        border-radius: 20px;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 0px 5px 15px var(--color-white);
+        }
+      }
+    }
+  }
+}
